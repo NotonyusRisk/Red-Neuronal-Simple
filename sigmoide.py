@@ -1,6 +1,7 @@
 import numpy as np
 import math
 import matplotlib.pyplot as plt
+from red import capa
 
 sigmoid = (lambda x:1 / (1 + np.exp(-x)), lambda x:x * (1 - x))
 
@@ -35,3 +36,11 @@ fig, axes = plt.subplots(nrows=1, ncols=2, figsize = (15,5))
 axes[0].plot(rango, datos_relu[:,0])
 axes[1].plot(rango, datos_relu_derivada[:,0])
 plt.show()
+
+#numero de neuronas en cada capa
+neuronas = [2, 4, 8, 1]
+
+#funciones de activacion
+funciones_activacion = [relu, relu, sigmoid]
+
+red_neuronal = []
