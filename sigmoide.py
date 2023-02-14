@@ -1,7 +1,7 @@
 import numpy as np
 import math
 import matplotlib.pyplot as plt
-from red import capa
+from capa_class import capa
 
 sigmoid = (lambda x:1 / (1 + np.exp(-x)), lambda x:x * (1 - x))
 
