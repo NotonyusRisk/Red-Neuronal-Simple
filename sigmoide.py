@@ -44,3 +44,9 @@ neuronas = [2, 4, 8, 1]
 funciones_activacion = [relu, relu, sigmoid]
 
 red_neuronal = []
+
+for paso in range(len(neuronas)-1):
+    x = capa(neuronas[paso], neuronas[paso+1], funciones_activacion[paso])
+    red_neuronal.append(x)
+
+print(red_neuronal)
